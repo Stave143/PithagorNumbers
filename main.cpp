@@ -3,6 +3,12 @@
 
 bool isPithNum(int a, int b, int c){
   int maxInt = std::numeric_limits<int>::max();
+  bool isCn = (a > maxInt / a);
+  isCn = isCn || b > maxInt / b;
+  isCn = isCn || c > maxInt / c;
+  if(isCn){
+    throw std::logic_error("div 0");
+  }
   a *= a;
   b *= b;
   c *= c;
