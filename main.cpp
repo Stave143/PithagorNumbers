@@ -1,6 +1,9 @@
 #include <iostream>
 int main(){
-  int n = 0;
-  std::cin >> n;
-  std::cout << n + 1 << "\n";
+  int a = 0;
+  std::cin >> a;
+  while(std::cin.good()){
+    std::cin >> a;
+  }
+  std::cout << "nice" << "\n";
 }
